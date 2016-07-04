@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+<div class="articles">
+  <h1>Articles</h1>
+
+  <p class="add_article">
+    <%= link_to 'Add New Article', new_article_path %>
+  </p>
+
+  <% @articles.each do |article| %>
+      <div class="article">
+        <div class="article_title">
+          <h2><%= truncate(article.title, length: 60) %></h2>
+          <p class="control_buttons">
+            <%= link_to 'Show', article %>
+            <%= link_to 'Edit', edit_article_path(article) %>
+            <%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %>
+          </p>
+        </div>
+
+        <p class="article_text">
+          <%= truncate(article.text, length: 180) %>
+        </p>
+      </div>
+  <% end %>
+</div>

@@ -1,0 +1,68 @@
+// Place all the styles related to the Articles controller here.
+// They will automatically be included in application.scss.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+//Global
+
+
+//Show page
+.show {
+  .article_text {
+    margin: 0 0 0 1em;
+    font-size: medium;
+  }
+
+  .comment, .new_comment {
+    p {
+      margin: 0 0 0.5em 1em;
+    }
+  }
+}
+
+//Articles page
+.articles {
+  .add_article {
+    margin: 0;
+    font-size: small;
+
+    a {
+      color: #000;
+      text-decoration: none;
+      background-color: transparent;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .article {
+    p {
+      margin: 0.2em 0 0 0.5em;
+      font-size: medium;
+    }
+
+    .article_title {
+      p, h2 {
+        display: inline;
+      }
+      margin: 0.5em 0 0 0;
+    }
+
+    .control_buttons {
+      margin-left: 1em;
+      font-size: small;
+
+      a {
+        color: #000;
+        text-decoration: none;
+        background-color: transparent;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
