@@ -10,11 +10,11 @@
   <% @articles.each do |article| %>
       <div class="article">
         <div class="article_title">
-          <h2><%= truncate(article.title, length: 60) %></h2>
+          <h2><%= article.title.truncate_words(25, omission: '&hellip;') %></h2>
           <p class="control_buttons">
             <%= link_to 'Show', article %>
             <%= link_to 'Edit', edit_article_path(article) %>
-            <%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %>
+            <%= link_to 'Delete', article, method: :delete, data: { confirm: 'Are you sure?' } %>
           </p>
         </div>
 
@@ -23,4 +23,5 @@
         </p>
       </div>
   <% end %>
+  <p><%= paginate(@articles) %></p>
 </div>
